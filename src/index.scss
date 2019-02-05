@@ -1,0 +1,15 @@
+HTML,
+BODY {
+    margin: 0em;
+    padding: 0;
+    font-size: 1.3em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#main{
+    min-height: 100vh;
+    height: 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

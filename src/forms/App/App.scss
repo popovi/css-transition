@@ -1,0 +1,85 @@
+$color-form: #374548;
+
+.scaffold {
+    width: 50%;
+}
+
+.scaffold-enter {
+    opacity: 0.01;
+    transform: scale(0.95) translateX(10%);
+}
+
+.scaffold-enter-active {
+    opacity: 1;
+    transform: scale(1) translateX(0%);
+    transition: all 150ms ease-out;
+}
+
+.scaffold-exit {
+    opacity: 1;
+    transform: scale(1) translateX(0%);
+}
+
+.scaffold-exit-active {
+    opacity: 0.01;
+    transform: scale(0.95) translateX(-10%);
+    transition: all 150ms ease-out;
+}
+
+.formContainer {
+    border: thin solid lighten($color-form, 40);
+    padding: 1em;
+    box-shadow: 0.1em 0.1em 0.3em lighten($color-form, 40);
+    width: 100%;
+    color: $color-form;
+
+    & .formContainer_fieldsRow {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+
+        &>DIV:first-child {
+            flex-basis: 30%;
+            flex-shrink: 1;
+            min-width: 7em;
+            padding: 0.3em 0;
+        }
+
+        &>DIV:last-child {
+            flex-basis: 70%;
+            flex-shrink: 100;
+        }
+    }
+    
+    .formContainer_actions {
+        margin-top: 1em;
+        padding-top: 1em;
+        border-top: thin solid lighten($color-form, 55);
+        display: flex;
+        justify-content: flex-end;
+    }
+}
+
+H3 {
+    border-bottom: thin solid lighten($color-form, 55);
+}
+
+BUTTON {
+    color: $color-form;
+    font-size: 1em;
+    padding: 0.3em 1em;
+    background-color: lighten($color-form, 70);
+    border-radius: 0.1em;
+    border: thin solid lighten($color-form, 50);
+    outline: none;
+}
+
+INPUT[type="text"] {
+    border: thin solid lighten($color-form, 30);
+    padding: 0.5em;
+    width: 100%;
+    box-sizing: border-box;
+    color: $color-form;
+    font-size: 1em;
+    outline: none;
+}
